@@ -1,0 +1,86 @@
+//Button Styles
+
+[class^="btn--"]{
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 1.5em;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  width: 95%;
+}
+.btn--info{
+  margin-bottom: 2em;
+}
+
+//Button Theme Colors
+
+.btn--default.theme_colors{
+  background-color: map-get($btn-color,"default");
+}
+.btn--success.theme_colors{
+  background-color: map-get($btn-color,"success");
+}
+.btn--error.theme_colors{
+  background-color: map-get($btn-color,"error");
+}
+.btn--warning.theme_colors{
+  background-color: map-get($btn-color,"warning");
+}
+.btn--info.theme_colors{
+  background-color: map-get($btn-color,"info");
+}
+
+//Media Queries - Medium
+
+.btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info{
+  @include mq(medium){
+      max-width: 40em;
+  }
+}
+
+//Media Queries - Large
+
+.grid_col--12 .btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info{
+  @include mq(large){
+    @include fb(inline-row){
+      margin-top: 2em;
+      margin-bottom: 2em;
+      padding: 15px 50px;
+    }// @include fb end
+  }// @include mq end
+}
+
+.grid__col--12 .btn--default{
+  @include mq(large){
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+.btn--success,
+.btn--error,
+.btn--warning{
+  @include mq(large){
+    margin-left: .8em;
+    margin-right: .8em;
+  }
+}
+
+.btn--info{
+  @include mq(large){
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}

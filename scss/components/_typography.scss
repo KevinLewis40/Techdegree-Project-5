@@ -1,0 +1,68 @@
+//Container Styles
+
+.container{
+  font-family: $base__font--family;
+  font-size: $base__font--size;
+  color: $base__font--color;
+}
+
+//Link Styles
+
+.link{
+  @extend %links;
+}
+
+//Blockquote Styles
+
+.blockquote{
+  border-left: soild #57E1C0 9px;
+  font-size: 24px;
+  font-style: italic;
+  padding-left: .8em;
+  line-height: 1.2em;
+  margin: 1em 1.4em auto 1em;
+}
+
+
+.grid__col--8 .headline--secondary{
+  margin-top: 0;
+  margin-bottom: 1em;
+  margin-left: 0em;
+}//Targets Typography headline
+
+.grid__col--4 .headline--secondary{
+  margin-top: 1em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+}//Targets Form Elements Headline
+
+//Media Quueries - Large
+
+.headline--primary{
+  @include mq(large){
+    margin-top: 1em;
+  }
+}
+
+.headline--secondary{
+  @include mq(large){
+    margin-left: .5em;
+  }
+}
+
+.grid__col--8 .headline--secondary,
+.grid__col--4 .headline--secondary{
+  @include mq(large){
+    margin-top: 3em;
+    margin-bottom: 1em;
+    margin-left: 0;
+  }
+}//Targets Typography and form elementd headlines
+
+.blockquote{
+  @include mq(large){
+    width: 90%;
+    margin-left: 1em;
+    padding-left: 1.2em
+  }
+}

@@ -1,0 +1,51 @@
+//Links
+
+%links{
+  color: #61C7ED;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+//Images
+
+%img{
+  display: block;
+  margin: auto;
+}
+
+%img-border{
+  border: solid #bababa 1px;
+}
+
+//Headlines
+
+%headline-primary{
+  color: #black;
+  line-height: 1em;
+  font-weight: 900px;
+  font-size: 30px;
+  margin: .5em auto 1.3em .8em;
+}
+
+//Nav
+
+%nav-items{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+%nav-anchors{
+  color: #757575;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  margin: 0;
+}
+
+%nav-hover{
+  background-color: #57E1C0;
+  color: white;
+  border-radius: 5px;
+}

@@ -1,0 +1,44 @@
+//Form Styles
+
+.form{
+  margin-bottom: 2em;
+}
+
+.form__label--hidden{
+  display: none;
+}
+
+.form__input{
+  display: block;
+  border: none;
+  border-bottom: soild #57E1C0 5px;
+  width: 85%;
+  padding: 12px;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 1.5em;
+  font-weight: bold;
+}
+
+//Media Queries - Medium
+
+.form__input{
+  @include mq(medium){
+    max-width: 40em;
+  }
+}
+
+//Media Queries - Large
+
+.form{
+  @include mq(large){
+    width: 20em;
+    margin: 0 1em 2em 6.3em;
+  }
+}
+
+.form__input{
+  @include mq(large){
+    margin-top: .7em;
+  }
+}

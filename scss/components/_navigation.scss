@@ -1,0 +1,47 @@
+//Nav Item Styles
+
+.nav__item{
+  @extend %nav-items;
+}
+
+//Nav Item Anchor Styles
+
+.nav__item a{
+  @extend %nav-anchors;
+}
+
+.nav__item a:hover{
+  @extend %nav-hover;
+}
+
+//Media Queries - Medium
+
+.nav{
+  @include mq(medium){
+    @include fb(row);
+  }
+}
+
+.nav__items{
+  @include mq(medium){
+    margin: auto;
+  }
+}
+
+//Media Queries - Large
+
+.nav{
+  @include mq(large){
+    @include fb(inline-row){
+      margin: auto;
+      margin-left: 14em;
+      margin-top: 1.2em;
+    }
+  }
+}
+
+.nav__item{
+  @include mq(large){
+    margin-right: 0.7em;
+  }
+}

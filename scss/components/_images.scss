@@ -1,0 +1,58 @@
+//Image Styles
+
+[class^="img"]{
+  @extend %img;
+}
+
+.img--frame{
+  @extend %img-border;
+  width: 95%;
+  max-width: 410px;
+  padding: .8em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.img--avatar{
+  max-width: 200px;
+}
+
+.img--avatar:last-child{
+  margin-bottom: 2em;
+}//Targets the second .img--avatar class
+
+//Media Queries - Medium
+
+.img--logo{
+  @include mq(medium){
+    margin: 0 auto;
+  }
+}
+
+//Media Queries - Large
+
+.img--logo{
+  @include mq(large){
+    margin-top: 0;
+    margin-left: 5em;
+  }
+}
+
+.img--frame{
+  @include mq(large){
+    width: 100%;
+    margin: 1em 5em 3em 4em;
+  }
+}
+
+.img--avatar{
+  @include mq(large){
+    margin: auto;
+  }
+}
+
+.img--avatar:last-child{
+  @include mq(large){
+    margin: 2em auto 3em 10em;
+  }
+}//Targets the second .img--avatar class
