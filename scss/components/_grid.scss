@@ -1,0 +1,175 @@
+
+//Container Styles
+
+.container{
+  margin:auto;
+  padding: 0;
+  margin-top: 3em;
+}
+
+//Grid Row Styles
+
+.grid_row{
+  margin: 0 1.5em;
+}
+
+//Grid Col And Theme Colors Styles
+
+[class^=grid__col"]{
+  @include fb(column);
+}
+
+.theme__colors{
+  margin: 0 auto .5em auto;
+  border-radius: 5px;
+  padding: 15px;
+  font-weight: 700;
+}
+
+.grid__col--3.theme__colors:nth-last-of-type(1),
+.grid__col--4.theme__colors:nth-last-of-type(1),
+.grid__col--6.theme__colors:nth-last-of-type(1),
+.grid__col--7.theme__colors,
+.grid__col--8.theme__colors:nth-last-of-type(1),
+.grid__col--12.theme__colors {
+  margin-bottom: 2.5em;
+}
+
+.grid__col--12 .card {
+  margin: 2em 1.5em 3.5em 1.5em;
+} // targets the first .card class
+
+.grid__col--8 .card {
+  margin: 2em 1.7em 4em 1.8em;
+} // targets the second .card class
+
+.grid__col--3.theme__colors {
+  background-color: map-get($grid-color,'col-3');
+}
+
+.grid__col--4.theme__colors {
+  background-color: map-get($grid-color,'col-4');
+}
+
+.grid__col--5.theme__colors {
+  background-color: map-get($grid-color,'col-5');
+}
+
+.grid__col--6.theme__colors {
+  background-color: map-get($grid-color,'col-6');
+}
+
+.grid__col--7.theme__colors {
+  background-color: map-get($grid-color,'col-7');
+}
+
+.grid__col--8.theme__colors {
+  background-color: map-get($grid-color,'col-8');
+}
+
+.grid__col--12.theme__colors {
+  background-color: map-get($grid-color,'col-12');
+}
+
+//Media Queries -Medium Media
+
+.container {
+  @include mq(medium) {
+    margin: 2.5em 6em;
+  }
+}
+
+.grid__row {
+  @include mq(medium) {
+    margin: 0;
+  }
+}
+
+//Media Queries- Large
+
+.container {
+  @include mq(large) {
+    margin: 2.5em 8em;
+  }
+}
+
+.grid__row {
+  @include mq(large) {
+    @include fb(row) {
+      margin: auto;
+      padding: 0;
+    } // @include fb end
+  } // @include mq end
+}
+
+.grid__col--3.theme__colors,
+.grid__col--3.theme__colors:nth-last-of-type(1),
+.grid__col--4.theme__colors,
+.grid__col--4.theme__colors:nth-last-of-type(1),
+.grid__col--5.theme__colors,
+.grid__col--6.theme__colors,
+.grid__col--6.theme__colors:nth-last-of-type(1),
+.grid__col--7.theme__colors,
+.grid__col--8.theme__colors,
+.grid__col--12.theme__colors {
+  @include mq(large) {
+    display: inline-block;
+    margin: 0 0.75em 3em 0.75em;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.grid__col--12.theme__colors {
+  @include mq(large) {
+    margin-top: 0.5em;
+  }
+}
+
+.grid__col--5.theme__colors {
+  @include mq(large) {
+    width: 50%;
+  }
+}
+
+.grid__col--8.theme__colors {
+  @include mq(large) {
+    width: 170%;
+  }
+}
+
+.grid__col--12 {
+  @include mq(large) {
+    @include fb(row) {
+      margin: auto;
+      width: 95%;
+      } // @include fb end
+    } // @include mq end
+} // also targets the first .card class and buttons
+
+.grid__col--12 .card {
+  @include mq(large) {
+    margin: 4em 0 2em 1.5em;
+    padding: 0;
+    width: 100%;
+  }
+} // targets the first .card class
+
+
+.grid__col--8 .card {
+  @include mq(large) {
+    margin: 0;
+    margin-left: 2.5em;
+    margin-bottom: 4em;
+    padding: 0;
+    width: 100%;
+  }
+} // targets the second .card class
+
+.grid__col--7.centered {
+  @include mq(large) {
+    margin: auto;
+    width: 55%;
+  }
+}
